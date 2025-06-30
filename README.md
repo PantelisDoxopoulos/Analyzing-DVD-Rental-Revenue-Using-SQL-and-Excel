@@ -26,7 +26,7 @@ FROM payment;
 ```
 
 ### 2. **Revenue per Month**
--Shows revenue for each month in 2007.
+- Shows revenue for each month in 2007.
 ```sql
 SELECT TO_CHAR(payment_date,'MONTH') as Month,
        SUM(amount) AS monthly_revenue
@@ -36,7 +36,7 @@ ORDER BY MIN(EXTRACT(MONTH FROM payment_date));
 ```
 
 ### 3. **Top 10 customers**
--Identifies the most valuable customers based on total amount paid.
+- Identifies the most valuable customers based on total amount paid.
 ```sql
 SELECT first_name, last_name,
        COUNT(amount) AS number_of_payments,
